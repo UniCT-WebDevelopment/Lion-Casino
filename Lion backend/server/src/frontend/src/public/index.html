@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>LionCasino</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./assets/script/notify.css">
+</link>
+<script src="assets/script/notify.js"></script>
+</head>
+
+<body>
+  <link rel="stylesheet" href="styles/site.css">
+
+
+
+
+
+
+
+  <div id="root">
+
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid">
+        <div  data-nav-link="home" style="width:160px">
+          <!-- <a class="nav-item navbar-brand text-white" style="cursor:pointer" >Navbar</a> -->
+          <img  src="img/logo.png" alt="Avatar" class="image nav-item " style="cursor:pointer;" >
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="listael">
+            
+            <li id="navroulette" class="nav-item" data-nav-link="protected">
+              <a class="nav-link text-white" style="cursor:pointer;font-size:19px;">Roulette</a>
+            </li>
+            <li id="navslot" class="nav-item" data-nav-link="giocaSlot">
+              <a class="nav-link text-white"  style="cursor:pointer;font-size:19px;">Slot</a>
+            </li>
+
+            
+
+            <li class="nav-item" data-nav-link="register" id="navbarregister">
+              <a class="nav-link text-white"  style="cursor:pointer;font-size:19px;">register</a>
+            </li>
+            <li class="nav-item" data-nav-link="login" id="navbarlogin">
+              <a class="nav-link text-white" style="cursor:pointer;font-size:19px;">login</a>
+            </li>
+            <!-- <li   class="nav-item" data-nav-link="admin" id="navbaradmin">
+              <a class="nav-link text-white">gestisci stanze</a>
+            </li> -->
+            <li class="dropdown" id="navbaradmin">
+             
+              <button type="button" class="btn dropdown-toggle text-white" data-bs-toggle="dropdown"  style="cursor:pointer;font-size:19px;">
+                Stanze
+              </button>
+              <ul id="dropAdmin" class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li class="nav-item " data-nav-link="admin" id="navbaradmin" ><a class="nav-link dropdown-item text-white" style="cursor: pointer;">Aggiungi stanza</a></li>
+                <li class="nav-item" data-nav-link="addslot">
+                  <a class="nav-link dropdown-item text-white" style="cursor: pointer;">Aggiungi slot</a>
+                </li>
+                <li class="nav-item" data-nav-link="modificaroom">
+                  <a class="nav-link dropdown-item text-white" style="cursor: pointer;">Modifica stanza</a>
+                </li>
+              </ul>
+            </li>
+            <!-- <li   class="nav-item" data-nav-link="logout" id="navbarlogout">
+              <a class="nav-link text-white" id="navbarlogout"  style="cursor:pointer;font-size:19px;">logout</a>
+            </li> -->
+
+
+            
+            
+          </ul>
+          <!-- <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+         
+         
+          <div class="dropdown dropstart text-end">
+            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" id="profilo">
+
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <table style="width: 100%;">
+                  <tr>
+                    <td colspan="2" style="text-align: center;" id="username"></td>
+                  </tr>
+                  <tr><td>SALDO:  </td><td id="saldo"></td></tr>
+
+                  <tr>
+                    <td class="nav-item " data-nav-link="logout" colspan="2" style="text-align: center;"><a class="nav-link  dropdown-item active btn" id="logoutbtn" style="background-color:#eb8d2a;" >logout</a></td>
+
+                  </tr>
+                  <tr>
+
+                  <td   class="nav-item"  data-nav-link="setting" colspan="2" style="text-align: center;"><a class="nav-link dropdown-item active btn "  id="settingBtn" style="background-color:#eb8d2a;" >Impostazioni</a></td>
+                  </tr>
+                  <tr>
+
+                    <td   colspan="2" style="text-align: center;"  ><div class="dropdown-item active btn " id="depositaBtn"  style="background-color:#eb8d2a;" >Deposita</div></td>
+                    </tr>
+                </table>
+              </li>
+              <!-- <li><a class="dropdown-item active" id="logoutbtn">logout</a></li> -->
+              <!-- <li><a class="dropdown-item disabled" href="#">Disabled</a></li> -->
+            </ul>
+          </div>
+        
+  
+          
+         
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+    
+  </div>
+
+  <div id="content">
+    <h1 style="margin:0 auto;width:400px;text-align: center;word-wrap:break-word;">
+      Welcome to simple JWT step by step tutorial</h1>
+      
+  </div>
+
+  <script>
+    // if(getCookie("accessToken")) {    console.log(getCookie("accessToken"))
+    // debugger
+    //   this.window.accesstoken = getCookie("accessToken");
+    // } 
+    
+    
+      // function loggato(){
+    
+      //   var logout=' <li class="nav-item" id="logoutbtn"> <a class="nav-link" href="#">Logout</a></li>';
+      //   var login=' <li class="nav-item" data-nav-link="login"> <a class="nav-link" href="#">Login</a></li>';
+      //   var register='<li class="nav-item" data-nav-link="register"> <a class="nav-link" href="#">Register</a></li>';
+      //   if(this.window.accesstoken){
+      //     if(!document.getElementById("logoutbtn")){debugger
+      //       let append=createElement('li');
+      //       append.innerHTML=logout;
+      //       document.getElementById("listael").append(append);
+      //     }
+      //   }
+              
+      // }
+    
+    
+      function getCookie (name) {
+      let value = `; ${document.cookie}`;
+      let parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    function getCookieTotal (name) {
+      let value = `; ${document.cookie}`;
+      let parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop();
+    }
+
+
+    const logout = document.getElementById("navbarlogout");
+    if (!logout) return;
+    logout.addEventListener('click', async () => {
+      await fetch('http://localhost:4000/logout', {
+        method: 'POST',
+        credentials: 'include', // Needed to include the cookie
+      });
+      // Clear user from context
+      this.window.accesstoken = null;
+      // document.cookie = 'accessToken=; Max-Age=0; path=/; domain=' + location.host;
+
+      // Navigate back to startpage
+      this.window.navigate("home");
+      new AWN().success('Logout eseguito', { labels: { success: "Info" }, durations: { success: 3000 } });
+
+    });
+
+
+
+
+    </script>
+      <script src="../components/setting.js"></script>
+
+ <script src="../components/notfound.js"></script>
+  <script src="../components/register.js"></script>
+  <script src="../components/login.js"></script>
+  <script src="../components/protected.js"></script>
+  <script src="../components/addslot.js"></script>
+  <script src="../components/home.js"></script>
+  <script src="../components/giocaSlot.js"></script>
+  <script src="../components/admin.js"></script>
+  <script src="../components/modificaroom.js"></script>
+  <script src="../components/logout.js"></script>
+  <script src="../components/router.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+
+  <script>
+   var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'))
+var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+  return new bootstrap.Dropdown(dropdownToggleEl)
+})
+   
+  
+
+document.getElementById("depositaBtn").addEventListener('click', async function() {
+      console.log("non entra")
+      window.open("http"+':\/\/'+window.location.hostname+":4000/src/public/payment.html?accessToken="+window.accesstoken, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+        
+    })
+</script>
+</body>
+
+
+</html>

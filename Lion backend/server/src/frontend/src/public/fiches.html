@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/site.css">
+    </head>
+<body>
+<div id="fiches" style="margin-top:30px ;">
+
+<div class="fiche" id="d010"></div>
+<div class="fiche" id="d050"></div>
+<div class="fiche" id="d1"></div>
+<div class="fiche" id="d5"></div>
+<div class="fiche" id="d25"></div>
+<div class="fiche" id="d100"></div>
+</div>    
+
+
+
+
+<script>
+    var fichesSelezionata=0;
+    document.getElementsByClassName('fiche')[0]
+        .addEventListener('click', function (event) {
+            ingrandiscifiche(0);
+            fichesSelezionata=0.1;
+        });
+        document.getElementsByClassName('fiche')[1]
+        .addEventListener('click', function (event) {
+            ingrandiscifiche(1);
+            fichesSelezionata=0.5;
+        });
+        document.getElementsByClassName('fiche')[2]
+        .addEventListener('click', function (event) {
+            ingrandiscifiche(2);
+            fichesSelezionata=1;
+        });
+        document.getElementsByClassName('fiche')[3]
+        .addEventListener('click', function (event) {
+            ingrandiscifiche(3);
+            fichesSelezionata=5;
+        });
+        document.getElementsByClassName('fiche')[4]
+        .addEventListener('click', function (event) {
+            ingrandiscifiche(4);
+            fichesSelezionata=25;
+        });
+        document.getElementsByClassName('fiche')[5]
+        .addEventListener('click', function (event) {
+            ingrandiscifiche(5);
+            fichesSelezionata=100;
+        });
+        function ingrandiscifiche(index){
+            let i;
+            
+            for(i=0;i<6;i++){
+                
+                if(i==index){
+                    console.log(i+" "+index);
+                    document.getElementsByClassName('fiche')[index].style.width = "60px";
+            document.getElementsByClassName('fiche')[index].style.height = "60px";
+                    
+                }else{
+                    document.getElementsByClassName('fiche')[i].style.width = "40px";
+                    document.getElementsByClassName('fiche')[i].style.height = "40px";
+                }
+            }
+        }
+
+
+
+
+</script>
+</body>
+</html>
