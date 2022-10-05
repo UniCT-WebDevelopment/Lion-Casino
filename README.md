@@ -22,14 +22,14 @@ Il lato frontend del sito è stato realizzato tramite i seguenti componenti:
 - **CSS** per la gestione degli stili, delle animazioni e delle media query
 - **Bootstrap** per la gestione di alcuni elementi stilistici
 - **JavaScript** per la gestione di funzioni ed algoritmi, per la manipolazione del DOM e per alcune responsabilità relative allo scrolling
-- **JQuery** per una facilitata gestione delle chiamate asincrone AJAX al server (GET e POST) e per alcune funzioni (insertAfter, insertBefore)
+- **JQuery** per una facilitata gestione delle chiamate asincrone AJAX al server (GET e POST) 
 
 
 ## Backend
 - **NodeJS** per supportare express e per usufruire di componenti aggiuntive (elencate sotto)
 - **ExpressJS** per la gestione dell'applicazione, delle chiamate AJAX (GET e POST) e del routing
 - **MongoDB** per conservare i dati relativi ai giochi, agli utenti e agli annunci
-
+- **Socket** per inviare e ricevere dati tra client e server
 
 ## Prerequisiti
 1. Un package manager (ad esempio npm)
